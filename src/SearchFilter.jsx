@@ -43,7 +43,7 @@ export default function SearchFilter() {
         <tbody>
           {inputVal === ""
             ? filteredData.map((item) => (
-                <tr key={item.id}>
+                <tr key={item.id} >
                   <td>{item.name}</td>
                   <td>{item.email}</td>
                 </tr>

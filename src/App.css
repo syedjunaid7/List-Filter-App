@@ -92,17 +92,19 @@ table.styled-table tr.active-row {
   }
 
   table.styled-table {
-    width: 100%;
+    width: 80%; /* Adjust the width to your desired value */
     font-size: 16px;
     background-color: #b06ab3;
     color: #ffffff;
     text-align: left;
-    border-radius: 0px;
+    border-radius: 15px;
   }
 
   table.styled-table th,
   table.styled-table td {
     padding: 12px 10px;
+    
+    
   }
 
   table.styled-table tr {
@@ -110,9 +112,10 @@ table.styled-table tr.active-row {
   }
 
   table.styled-table tr th {
-    letter-spacing: 0px;
+    letter-spacing: 2px;
     background-color: transparent;
     border-radius: 0px;
+    
   }
 
   table.styled-table tr:nth-of-type(even) {
