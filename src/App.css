@@ -1,61 +1,86 @@
-.App{
+/* Default styles for all screens */
+.App {
   background: #4568DC;
-background: -webkit-linear-gradient(to right, #B06AB3, #4568DC); 
-background: linear-gradient(to right, #B06AB3, #4568DC); 
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  background: linear-gradient(to right, #B06AB3, #4568DC);
   height: 100vh;
   text-align: center;
   width: 100%;
 }
-.container{
+
+.container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-input{
+
+input {
   padding: 15px;
-  width:15%;
+  width: 15%;
   border-radius: 5px;
   border-style: none;
   text-align: left;
   font-size: large;
   margin-bottom: 20px;
 }
-table tr th{
-  background-color: rgba(69, 68, 69, 0.4);
-  border-radius: 5px;
-  margin: 25px 0;
-  font-size: 1em;
-  font-family: sans-serif;
-  text-align: center;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.styled-table tr {
+
+table.styled-table {
+  width: 100%;
   font-size: 20px;
-  background-color: #B06AB3;
+  background-color: #b06ab3;
   color: #ffffff;
   text-align: left;
 }
-.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
+
+table.styled-table th,
+table.styled-table td {
+  padding: 12px 15px;
 }
 
-.styled-table  tr {
+table.styled-table tr {
   border-bottom: 1px solid #dddddd;
 }
 
-.styled-table  tr:nth-of-type(even) {
+table.styled-table tr:nth-of-type(even) {
   background-color: #ffffff;
   color: black;
 }
 
-.styled-table  tr:last-of-type {
+table.styled-table tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
-.styled-table tr.active-row {
+
+table.styled-table tr.active-row {
   font-weight: bold;
   color: #009879;
+}
+
+/* Media queries for tablet screens */
+@media screen and (max-width: 768px) {
+  input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  table.styled-table {
+    font-size: 16px;
+  }
+  table.styled-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+  table  tr{
+    width: 100%;
+  }
+  table.styled-table tr th{
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 160px;
+  }
 }
