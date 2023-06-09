@@ -1,8 +1,7 @@
-/* Default styles for all screens */
 .App {
-  background: #4568DC;
-  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
-  background: linear-gradient(to right, #B06AB3, #4568DC);
+  background-image: url('https://img.freepik.com/free-vector/gradient-technological-background_23-2148884155.jpg?w=900&t=st=1686306184~exp=1686306784~hmac=4dd483a157d1c597bf4592f3c4bb19ab7eb470bf9a38a8301270a31b9b1fbd4c');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   text-align: center;
   width: 100%;
@@ -92,7 +91,7 @@ table.styled-table tr.active-row {
   }
 
   table.styled-table {
-    width: 80%; /* Adjust the width to your desired value */
+    width: 80%; 
     font-size: 16px;
     background-color: #b06ab3;
     color: #ffffff;
@@ -103,8 +102,6 @@ table.styled-table tr.active-row {
   table.styled-table th,
   table.styled-table td {
     padding: 12px 10px;
-    
-    
   }
 
   table.styled-table tr {
