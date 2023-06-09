@@ -27,20 +27,26 @@ input {
 }
 
 table.styled-table {
-  width: 100%;
+  width: 50%;
   font-size: 20px;
   background-color: #b06ab3;
   color: #ffffff;
   text-align: left;
+  border-radius: 15px;
 }
 
 table.styled-table th,
 table.styled-table td {
-  padding: 12px 15px;
+  padding: 12px 25px;
 }
 
 table.styled-table tr {
   border-bottom: 1px solid #dddddd;
+}
+table.styled-table tr th{
+  letter-spacing: 2px;
+  background-color: #482f4998;
+  border-radius: 15px;
 }
 
 table.styled-table tr:nth-of-type(even) {
