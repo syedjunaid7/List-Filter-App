@@ -1,38 +1,61 @@
-.App {
+.App{
+  background: #4568DC;
+background: -webkit-linear-gradient(to right, #B06AB3, #4568DC); 
+background: linear-gradient(to right, #B06AB3, #4568DC); 
+  height: 100vh;
   text-align: center;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+input{
+  padding: 15px;
+  width:15%;
+  border-radius: 5px;
+  border-style: none;
+  text-align: left;
+  font-size: large;
+  margin-bottom: 20px;
+}
+table tr th{
+  background-color: rgba(69, 68, 69, 0.4);
+  border-radius: 5px;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table tr {
+  font-size: 20px;
+  background-color: #B06AB3;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.styled-table  tr {
+  border-bottom: 1px solid #dddddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.styled-table  tr:nth-of-type(even) {
+  background-color: #ffffff;
+  color: black;
+}
+
+.styled-table  tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.styled-table tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
