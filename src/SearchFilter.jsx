@@ -14,7 +14,7 @@ export default function SearchFilter() {
       });
   }, []);
 
-  function handleInputChange(e) {
+  function inputChange(e) {
     const value = e.target.value;
     setInputVal(value);
     const searchResults = data.filter(
@@ -22,6 +22,7 @@ export default function SearchFilter() {
         item.name.toLowerCase().startsWith(value.toLowerCase()) ||
         item.email.toLowerCase().startsWith(value.toLowerCase())
     );
+    console.log(searchResults);
     setFilteredData(searchResults);
   }
 
@@ -29,7 +30,7 @@ export default function SearchFilter() {
     <div className="container">
       <input
         placeholder="Search by Name or Email"
-        onChange={handleInputChange}
+        onChange={inputChange}
         value={inputVal}
       />
       <table className="styled-table">
