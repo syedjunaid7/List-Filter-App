@@ -63,30 +63,70 @@ table.styled-table tr.active-row {
   color: #009879;
 }
 
-/* Media queries for tablet screens */
 @media screen and (max-width: 768px) {
-  input {
-    width: 70%;
-  }
-}
 
-@media screen and (max-width: 1024px) {
-  table.styled-table {
-    font-size: 16px;
+  .App {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
   }
-  table.styled-table{
+
+  .container {
+    
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 50%;
   }
-  table  tr{
-    width: 100%;
+
+  input {
+    padding: 15px;
+    width: 80%;
+    border-radius: 5px;
+    border-style: none;
+    text-align: left;
+    font-size: large;
+    margin-bottom: 20px;
   }
-  table.styled-table tr th{
+
+  table.styled-table {
     width: 100%;
-    padding-left: 60px;
-    padding-right: 160px;
+    font-size: 16px;
+    background-color: #b06ab3;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 0px;
+  }
+
+  table.styled-table th,
+  table.styled-table td {
+    padding: 12px 10px;
+  }
+
+  table.styled-table tr {
+    border-bottom: 0px solid #dddddd;
+  }
+
+  table.styled-table tr th {
+    letter-spacing: 0px;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+
+  table.styled-table tr:nth-of-type(even) {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  table.styled-table tr:last-of-type {
+    border-bottom: 0px solid #009879;
+  }
+
+  table.styled-table tr.active-row {
+    font-weight: bold;
+    color: #009879;
   }
 }
