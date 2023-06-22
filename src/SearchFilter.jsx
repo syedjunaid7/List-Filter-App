@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
+import Input from "./Input";
+import TBody from "./TBody";
 
+const Tdata = createContext();
 export default function SearchFilter() {
   const [data, setData] = useState([]);
   const [inputVal, setInputVal] = useState("");
@@ -28,11 +31,7 @@ export default function SearchFilter() {
 
   return (
     <div className="container">
-      <input
-        placeholder="Search by Name or Email"
-        onChange={inputChange}
-        value={inputVal}
-      />
+      <Input change={inputChange} val={inputVal} />
       <table className="styled-table">
         <thead>
           <tr>
@@ -40,22 +39,11 @@ export default function SearchFilter() {
             <th>Email</th>
           </tr>
         </thead>
-        <tbody>
-          {inputVal === ""
-            ? filteredData.map((item) => (
-                <tr key={item.id} >
-                  <td>{item.name}</td>
-                  <td>{item.email}</td>
-                </tr>
-              ))
-            : filteredData.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>{item.email}</td>
-                </tr>
-              ))}
-        </tbody>
+        <Tdata.Provider value={filteredData}>
+          <TBody inputVal={inputVal} />
+        </Tdata.Provider>
       </table>
     </div>
   );
 }
+export { Tdata };
